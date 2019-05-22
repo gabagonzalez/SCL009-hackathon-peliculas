@@ -1,5 +1,6 @@
 const dataOMDB ="http://www.omdbapi.com/?i=tt3896198&apikey=5a2182d7";
-const dataTMDB = "https://api.themoviedb.org/3/genre/movie/list?api_key=f1398813842891afd3168eb1700013e0";
+const dataTMDB = "https://api.themoviedb.org/3/discover/movie?api_key=f1398813842891afd3168eb1700013e0&with_genres=";
+
 const result = document.getElementById("show-data");
 console.log(dataTMDB);
 
@@ -49,24 +50,24 @@ btnSearchGenre.addEventListener('click',(e) =>{
   e.preventDefault();
   result.innerHTML = "";
   
-  let flickGenre = "Action";
+  let flickGenre = "28";
  
   showGenre(dataTMDB)
     function showGenre(dataTMDB) {
 
-    fetch(dataTMDB + "&=" + flickGenre)
+    fetch(dataTMDB + flickGenre)
         .then(function(response){
           return response.json();
         })
   
         .then (function (data) {
-          const searchByGenre = data.genres;
+          const searchByGenre = data.results;
           
             searchByGenre.forEach(element => {
               result.innerHTML +=
               `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
               <div class="card border-dark text-center rounded-lg mb-3"  >
-                <img src="${element.Poster}" class="card-img-top" alt="${element.Title}">
+                <img src="https://image.tmdb.org/t/p/w500/${element.poster_path}" class="card-img-top" alt="${element.title}">
                 
       
                 <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.imbdID}">Ver más</button>
