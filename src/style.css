@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+body {
+    background-image: url('https://data.1freewallpapers.com/download/starry-sky-stars-space-glitter.jpg');
+    background-size: 100%; 
+}
+
+.navbar {
+    font-family: 'Kanit', sans-serif;
+    background: #1A3F67;
+  
+}
+.navbar-light .navbar-brand{
+    color: #A1C2DD;
+}
+.navbar-light .navbar-nav .active .nav-link{
+    color: #A1C2DD;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #A1C2DD;
+}
+
+.btn-outline-success {
+    color: #A1C2DD;
+    border-color: #A1C2DD;
+}
+
+.btn-gende{
+    margin: 1%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top: 2%;
+    padding-bottom:2%;
+    width: 40%
+    
+}
+@media (max-width: 576px) {
+   .btn-gende{
+        padding: 5%;
+        margin-top: 1%;
+        margin-bottom: 0,5%x;
+        width: 40%;
+}
+}
+#card-gender{
+    margin-bottom: 2%;
+    
+}
+
+#drama{
+    background-color: #61ca84;
+    border-color: #61ca84;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#comedia{
+        background-color: #e49f1f;
+        border-color: #e49f1f;
+        color: white;
+        font-family: 'Kanit', sans-serif;
+}
+
+#romance{
+    background-color: #4a0cbd;
+    border-color: #4a0cbd;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#ciencia{
+    background-color: #fa147f;
+    border-color: #fa147f;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#terror{
+    background-color: #0f2f1c;
+    border-color: #0f2f1c;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#accion{
+    background-color: #e23f17;
+    border-color: #e23f17;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#titulo-container-gen,
+#titulo-container-reco{
+    background-color: #040E28;
+    opacity: 0.8;
+    font-family: 'Kanit', sans-serif;
+    margin-top:1%;
+    
+   
+}
+
+h5 {
+color: #A1C2DD;
+font-family: 'Kanit', sans-serif;
+margin-left: 3%;
+margin-bottom: 0%;
+
+}
+
+.card{
+    margin: 1%;
+    width: 100%;
+   
+}
+.card-body{
+    margin:1%;
+    padding: 0%;
+    font-family: 'Kanit', sans-serif;
+}
+.card-reco{
+    background-color:#1A356E; 
+    
+
+   
+}
+
+
+@media (max-width: 576px) {
+    .card .card-body{
+         padding: 2%;
+         margin-top: 1%;
+         margin-bottom: 0,5%;
+         width: 100%;
+    }}
+
+h4, p{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    color: #A1C2DD;;
+}
