@@ -186,11 +186,12 @@ section {
     font-family: 'Kanit', sans-serif;
     margin-top:1%;
 }
-.gender-complete{
+.gender-complete, .reco-complete{
     display: none;
 }
 .container-reco, .container-gen{
     margin-left: 1%;
+    display: block;
 }
 @media (max-width: 576px) {
     .container-reco, .container-gen{

@@ -6,22 +6,6 @@
 -------------------------------------------
 
 
-## **Índice** 
----
-* [A-Contexto](#A-Contexto)
-* [B-Resumen del proyecto](#B-resumen-del-proyecto)
-* [1-Planificación](#1-Planificación)
-* [2-Investigación: Radiografía Gamers](#2-Investigación:-Radiografía-Gamers)
-
-* [3-¿Cómo son los Gamers Chilenos?](#3-¿Cómo-son-los-Gamers-Chilenos?)
-
-* [4-Recolección de Datos](#4-Recolección-de-Datos)
-* [5-Proceso de Diseño](#5-Proceso-de-Diseño)
-* [6-PRODUCTO](#6-PRODUCTO)
-
-
-
-
 ***
 
 ## **A-Contexto**
