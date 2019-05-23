@@ -31,7 +31,7 @@ btnSearchName.addEventListener('click',(e) =>{
           
             searchByTitle.forEach(element => {
               
-              resultText.innerHTML= `<div class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
+              //resultText.innerHTML += `<div class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
               result.innerHTML +=
 
               `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >

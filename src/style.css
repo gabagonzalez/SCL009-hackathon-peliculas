@@ -3,6 +3,7 @@
 body {
     background-image: url('https://data.1freewallpapers.com/download/starry-sky-stars-space-glitter.jpg');
     background-size: 100%; 
+    height: auto;
 }
 
 .navbar {
@@ -32,7 +33,7 @@ body {
     padding-right:5%;
     padding-top: 2%;
     padding-bottom:2%;
-    width: 40%
+    width: 30%
     
 }
 @media (max-width: 576px) {
@@ -45,7 +46,6 @@ body {
 }
 #card-gender{
     margin-bottom: 2%;
-    
 }
 
 #drama{
@@ -91,13 +91,12 @@ body {
 }
 
 #titulo-container-gen,
-#titulo-container-reco{
+#titulo-container-reco,
+#resultText{
     background-color: #040E28;
     opacity: 0.8;
     font-family: 'Kanit', sans-serif;
     margin-top:1%;
-    
-   
 }
 
 h5 {
