@@ -3,15 +3,17 @@
 body {
     background-image: url('https://data.1freewallpapers.com/download/starry-sky-stars-space-glitter.jpg');
     background-size: 100%; 
+    height: auto;
 }
-
+/*Section header*/
 .navbar {
     font-family: 'Kanit', sans-serif;
     background: #1A3F67;
   
 }
 .navbar-light .navbar-brand{
-    color: #A1C2DD;
+    color: rgba(255, 223, 80, 0.897);
+    font-size:250%;
 }
 .navbar-light .navbar-nav .active .nav-link{
     color: #A1C2DD;
@@ -26,13 +28,14 @@ body {
     border-color: #A1C2DD;
 }
 
+/*Section Genders*/
 .btn-gende{
     margin: 1%;
     padding-left: 5%;
     padding-right:5%;
     padding-top: 2%;
     padding-bottom:2%;
-    width: 40%
+    width: 30%
     
 }
 @media (max-width: 576px) {
@@ -45,7 +48,6 @@ body {
 }
 #card-gender{
     margin-bottom: 2%;
-    
 }
 
 #drama{
@@ -55,7 +57,7 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-#comedia{
+#comedy{
         background-color: #e49f1f;
         border-color: #e49f1f;
         color: white;
@@ -69,62 +71,96 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-#ciencia{
+#cifi{
     background-color: #fa147f;
     border-color: #fa147f;
     color: white;
     font-family: 'Kanit', sans-serif;
 }
 
-#terror{
+#horror{
     background-color: #0f2f1c;
     border-color: #0f2f1c;
     color: white;
     font-family: 'Kanit', sans-serif;
 }
 
-#accion{
+#action{
     background-color: #e23f17;
     border-color: #e23f17;
     color: white;
     font-family: 'Kanit', sans-serif;
 }
-
-#titulo-container-gen,
-#titulo-container-reco{
+#fantasy{
+    background-color: #ddce00;
+    border-color: #ddce00;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#western{
+    background-color: #a158e6;
+    border-color: #a158e6;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#musical{
+    background-color: #3fb32a;
+    border-color: #3fb32a;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#kids{
+    background-color: #36afa9;
+    border-color: #36afa9;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#animation{
+    background-color: #af3636;
+    border-color: #af3636;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#docu{
+    background-color: #e6640e;
+    border-color: #e6640e;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+#titulo-container-gen,#titulo-container-reco,#resultText{
     background-color: #040E28;
     opacity: 0.8;
     font-family: 'Kanit', sans-serif;
     margin-top:1%;
-    
-   
 }
+
+.container-reco, .container-gen{
+    margin-left: 1%;
+}
+@media (max-width: 576px) {
+    .container-reco, .container-gen{
+margin-left: 12%;
+    }}
 
 h5 {
 color: #A1C2DD;
 font-family: 'Kanit', sans-serif;
 margin-left: 3%;
-margin-bottom: 0%;
+margin-bottom: 1%;
 
 }
-
+/* Section Card*/
 .card{
     margin: 1%;
     width: 100%;
-   
+    background-color:#1A356E; 
 }
 .card-body{
     margin:1%;
-    padding: 0%;
+    padding: 5%;
     font-family: 'Kanit', sans-serif;
+    background-color:#1A356E; ;
 }
-.card-reco{
-    background-color:#1A356E; 
-    
-
-   
-}
-
 
 @media (max-width: 576px) {
     .card .card-body{
@@ -138,4 +174,10 @@ h4, p{
     font-family: 'Kanit', sans-serif;
     text-align: center;
     color: #A1C2DD;;
+}
+
+/* Cards */
+.btn-primary{
+    background-color: #1A356E;
+    color: #A1C2DD;
 }
