@@ -12,6 +12,41 @@ const btnSearchName = document.getElementById("btnSearch");
 const btnSearchGenre = document.getElementById("action");
 
 
+//FUNCION PARA CARRUSEL
+let timer = 4000;
+let i = 0;
+let max = $("#c > li").length;
+
+$("#c > li").eq(i).addClass('active').css('left', '0');
+$("#c > li").eq(i + 1).addClass('active').css('left', '25%');
+$("#c > li").eq(i + 2).addClass('active').css('left', '50%');
+$("#c > li").eq(i + 3).addClass('active').css('left', '75%');
+
+
+setInterval(function () {
+
+  $("#c > li").removeClass('active');
+
+  $("#c > li").eq(i).css('transition-delay', '0.25s');
+  $("#c > li").eq(i + 1).css('transition-delay', '0.5s');
+  $("#c > li").eq(i + 2).css('transition-delay', '0.75s');
+  $("#c > li").eq(i + 3).css('transition-delay', '1s');
+
+  if (i < max - 4) {
+    i = i + 4;
+  } else {
+    i = 0;
+  }
+
+  $("#c > li").eq(i).css('left', '0').addClass('active').css('transition-delay', '1.25s');
+  $("#c > li").eq(i + 1).css('left', '25%').addClass('active').css('transition-delay', '1.5s');
+  $("#c > li").eq(i + 2).css('left', '50%').addClass('active').css('transition-delay', '1.75s');
+  $("#c > li").eq(i + 3).css('left', '75%').addClass('active').css('transition-delay', '2s');
+
+}, timer);
+
+
+
 //OBTENER PELÏCULAS POR NOMBRE
 btnSearchName.addEventListener('click', (e) => {
   e.preventDefault();
@@ -29,7 +64,7 @@ btnSearchName.addEventListener('click', (e) => {
         const searchByTitle = data.Search;
 
         searchByTitle.forEach(element => {
-
+          document.getElementById("carousel").style.display = "none";
           resultText.innerHTML = `<div id="tu-busqueda" class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
           result.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
               <div class="card border-dark text-center rounded-lg mb-3"  >
@@ -62,6 +97,7 @@ btnSearchGenre.addEventListener('click', (e) => {
         const searchByGenre = data.results;
 
         searchByGenre.forEach(element => {
+          document.getElementById("carousel").style.display = "none";
           resultGenre.innerHTML +=
             `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
               <div class="card border-dark text-center rounded-lg mb-3"  >
@@ -86,11 +122,13 @@ document.getElementById('brand-name').addEventListener('click', () => {
 document.getElementById("genders").addEventListener("click", () => {
   document.getElementById("container-gen").style.display = "block";
   document.getElementById("gender-complete").style.display = "block";
+  document.getElementById("carousel").style.display = "none";
   document.getElementById("container-reco").style.display = "none"
 });
 //Mostrar recomendaciones//
 document.getElementById("recom").addEventListener("click", () => {
   document.getElementById("container-reco").style.display = "block"
   document.getElementById("reco-complete").style.display = "block"
+  document.getElementById("carousel").style.display = "none";
   document.getElementById("container-gen").style.display = "none";
 });
