@@ -132,3 +132,4 @@ document.getElementById("recom").addEventListener("click", () => {
   document.getElementById("carousel").style.display = "none";
   document.getElementById("container-gen").style.display = "none";
 });
+
