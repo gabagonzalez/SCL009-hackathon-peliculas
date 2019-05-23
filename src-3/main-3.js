@@ -33,9 +33,7 @@ btnSearchName.addEventListener('click',(e) =>{
             searchByTitle.forEach(element => {
               
               //resultText.innerHTML += `<div class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
-              result.innerHTML +=
-
-              `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
+              result.innerHTML +=`<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
               <div class="card border-dark text-center rounded-lg mb-3"  >
                 <img src="${element.Poster}" class="card-img-top" alt="${element.Title}">
                 <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.imbdID}">Ver más</button>
@@ -44,7 +42,7 @@ btnSearchName.addEventListener('click',(e) =>{
             })
         })
   }
-
+  console.log(data.results)
 })
 
 //OBTENER PELÍCULAS POR GÉNERO
@@ -61,11 +59,9 @@ btnSearchGenre.addEventListener('click',(e) =>{
         .then(function(response){
           return response.json();
         })
-  
         .then (function (data) {
           const searchByGenre = data.results;
 
-          
             searchByGenre.forEach(element => {
               resultGenre.innerHTML +=
               `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
@@ -76,15 +72,24 @@ btnSearchGenre.addEventListener('click',(e) =>{
             </div>`
             })
         })}
+        
 });
 
 //Recargar pagina//
 document.getElementById('home').addEventListener('click', () => {
     location.reload();
 });
-
+//Mostrar Generos//
 document.getElementById("genders").addEventListener("click", () => {
+  document.getElementById("container-gen").style.display = "block";
   document.getElementById("gender-complete").style.display = "block";
+  document.getElementById("container-reco").style.display = "none"
+});
+//Mostrar recomendaciones//
+document.getElementById("recom").addEventListener("click", () => {
+  document.getElementById("container-reco").style.display = "block"
+  document.getElementById("reco-complete").style.display = "block"
+  document.getElementById("container-gen").style.display = "none";
 });
   
 
