@@ -5,7 +5,7 @@
   }
 body {
     background-image: url('https://data.1freewallpapers.com/download/starry-sky-stars-space-glitter.jpg');
-    background-size: 100%; 
+    background-size: cover; 
 }
 .navbar {
     font-family: 'Kanit', sans-serif;
@@ -207,6 +207,10 @@ margin-bottom: 1%;
 /* Section Card*/
 #section-recom, .section-gen, .section-carousel{
     padding: 0%;
+}
+
+.section-carousel{
+    display: block;
 }
 .card{
     margin: 1%;
