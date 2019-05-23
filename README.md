@@ -1,6 +1,6 @@
 ## **STARFLICK**
 
-![pelis](https://i.ibb.co/FgV9W0V/Star-Flicks.jpg)
+![pelis](./src/img/StarFlicks.jpg)
 
 # *"Hackathon" de final de Common Core, películas*
 -------------------------------------------
@@ -49,7 +49,7 @@ En la Novena generación de Laboratoria SCL, se nos planteó el desafió de hace
 ---
 
 ## **1-Planificación**
-- Aplicación de [Trello](https://trello.com/b/Nup1KMh3/league-of-legend)
+- Aplicación de [Trello](https://trello.com/b/gtbz9bRh/peliss)
 ---
  [![trello](https://i.ibb.co/VTcrc56/trello.jpg)](https://trello.com/b/gtbz9bRh/peliss/)
 
@@ -115,17 +115,13 @@ Referencias de Investigación: [Encuesta Nacional de Participación Cultural 201
 
 **Entrevista Tipo: Usuario testeado:**
 
-
+Se realizaron entrevistas con las siguientes preguntas:
 
 **-Datos usuario;**
-
-
 
  Edad: 
 
  hombre/mujer:
-
-
 
 **-¿que tanto te gusta ver peliculas?**
 
@@ -159,7 +155,7 @@ Referencias de Investigación: [Encuesta Nacional de Participación Cultural 201
 ---
 
 
-**" La cantidad abrumadora de películas... ha cambiado la experiencia del usuario, por lo que es cada vez más complicado tomar una eleccion a corto tiempo para elegir que ver"**
+**" La cantidad abrumadora de películas ha cambiado la experiencia del usuario, por lo que es cada vez más complicado tomar una eleccion a corto tiempo para elegir que ver"**
 
 Sobre lo investigado;
 
@@ -168,16 +164,21 @@ Se necesita una aplicacion web para quienes disfrutan de las películas y dan im
 Es importante dar la posibilidad de ver peliculas por genero, por Actores, etc.  y asi dar recomendaciones como por ejemplo del mismo actor y otros.
 
 
+**ENTREVISTAS**
+
+Se realizaron entrevistas a potenciales usuarios, puedes escuchar una de ellas en el siguiente enlace: https://soundcloud.com/gaba-gonzalez-1/user  
+También puedes observar uno de nuestros videos de usuarios usando nuestra webapp.
+
 **Conclusiones**
 ---
 
 Durante la entrevista con el usuario se destacan:
 
--La mucha informacion que posee el usuario hoy en dia, dificultando una buena seleccion, por lo que se hace importante, para necesidad de nuestro usuario:
+-La mucha informacion que posee el usuario hoy en día, dificultando una buena seleccion, por lo que se hace importante, para necesidad de nuestro usuario:
 
-•	Si pudiese visualizar la información concisa de (nombres e imágenes).
+•	Si pudiese visualizar la información concisa de nombres e imágenes.
 
-•	Si pudiese ver recomendacion por genero o actores, lo que es realmente relevante entre tanta información.
+•	Si pudiese ver recomendacion por género o actores, lo que es realmente relevante entre tanta información.
 
 •   Y quizás, de manera secundaria, información extra como reseña, calicacion, colores, tipografica, etc. La importancia de visual desing...
 
@@ -189,7 +190,9 @@ Durante la entrevista con el usuario se destacan:
 
 2.	Yo como usuario quiero poder ver recomendaciones de películas.
 
-3.	Yo como usuario quiero poder ver información detallada de las películas selecionada.
+3.	Yo como usuario quiero poder ver información detallada de la película que seeccione.
+
+4.	Yo como usuario quiero poder buscar películas por su nombre.
 
 
 
@@ -205,43 +208,41 @@ Durante la entrevista con el usuario se destacan:
 ![proto1](https://i.ibb.co/hH3cSqm/proto1.jpg)
 ![proto2](https://i.ibb.co/cQtwGb3/proto2.jpg)
 ---
+
 #### Prototipo de alta fidelidad
----
+
  Test Usabilidad Diseño de experiencia de usuario (UX):
-
-
 
  - Prototipado
 
- figma
+   Puedes ver nuestro prototipo Figma [Aquí](https://www.figma.com/file/UWX7QH4jsgJlrdHrWYHBFBvW/StarFlick?node-id=0%3A1)
 
- - Testeo e Iteración 
+***
+ - Testeo e Iteración
 
+   En estos testeos podemos conseguir información para corregir diseño, modificar colores, formas, etc.
+   Se decide por la familiaridad que tiene el usuario con aplicaciones de visualizacion de contenido (netflix, hulu,  seguir patrones similares de colores, estilos, etc.
+   Se corrigen ubicaciones de la información.
 
+   Y se consideran para futuros cambios (hacking edition); opciones adicionales si fueran necesarios para hacer mas amigable la aplicación para el usuario.
 
-**ENTREVISTAS**
+Los primeros testeos se realizaron con el siguiente diseño:
+![test1](./src/img/ini2.jpg)
+Puedes verlo en video ingresando [Aquí](https://youtu.be/8a-L6i_U65k)
 
-documentacion, fotos..etc.
-
-
+***
 - Iteración
 
 Posterior las primeras entrevistas, pudimos concluir el recorrido que hace el usuario al usar la aplicación. 
 Esto nos confirma el orden de las Historias de Usuarios para poder dejarlos de la siguientes manera:
 
-1. Mostrar Opciones de la Data.
+1. Mostrar películas por nombre o género 
+2. Entregar, luego de la búsqueda, información más detalla de ellas.
+3. Dar recomendaciones de películas.
 
-2. Dar recomendacion.
-
-3. Mostrara informacion detallada de las peliculas.
-
-**VIDEOS**
-
-En estos testeos podemos conseguir información para corregir diseño, modificar colores, formas, etc.
-Se decide por la familiaridad que tiene el usuario con aplicaciones de visualizacion de contenido (netflix, hulu,  seguir patrones similares de colores, estilos, etc.
-Se corrigen ubicaciones de la información.
-
-Y se consideran para futuros cambios (hacking edition); opciones adicionales si fueran necesarios para hacer mas amigable la aplicación para el usuario.
+Posteriormente, luego de las revisiones, se llegó a la iteración final ![pelis](./src/img/portadait.jpg)
+![pelis](./src/img/portadait2.jpg)
+![pelis](./src/img/busqueda.jpg)
 
 
 
@@ -250,14 +251,11 @@ Y se consideran para futuros cambios (hacking edition); opciones adicionales si 
 ## **6-STARFLICK**
 ---
 ***
-![logo](https://i.ibb.co/FgV9W0V/Star-Flicks.jpg)
-
 
 
 **QUÉ ES? 😯**
 --
-Aplicación web para cinefilos e interesados en las peliculas.
-Que entrega recomendaciones para elegir peliculas en diferentes momentos.
+Aplicación web para cinefilos e interesados en las peliculas, que entrega recomendaciones para elegir peliculas en diferentes momentos.
 
 **Su funcionalidad**
 ---
@@ -266,10 +264,10 @@ Que entrega recomendaciones para elegir peliculas en diferentes momentos.
 
 **La interfaz permite al usuario:**
 --
-- Ver opciones que entrega la Data.
-- Ver peliculas por Genero.
-- Ver precomendaciones de peliculas por Actores u otros.
-- Ver información mas detallada de las peliculas seleccionadas.
+- Ver peliculas por nombre.
+- Ver peliculas por género.
+- Ver recomendaciones de peliculas por actores u otros.
+- Ver información mas detallada de las películas seleccionadas.
 
 **Links relacionados**
 --
