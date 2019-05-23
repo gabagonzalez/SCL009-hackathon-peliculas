@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -15,7 +14,7 @@
 <body>
   <header>
       <nav class="navbar navbar-expand-lg navbar-light ">
-          <a class="navbar-brand" href="#">Starflick <i class="fas fa-star"></i></a>
+          <a id="brand-name" class="navbar-brand" href="#">Starflick <i class="fas fa-star"></i></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -23,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a id="home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Generos</a>
@@ -33,14 +32,18 @@
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              <input id="searchText" class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
           </div>
         </nav>
   </header>
+
 <main>
-  
+  <div id="resultText"</div>
+  <div id="show-data" class="row"></div>
+
+
  <!-- Carrussel estrenos -->
 
 
@@ -49,137 +52,141 @@
     <div id="titulo-container-gen"> 
         <h5>Géneros populares</h5>
       </div>
-   <div class='container'>
+   <div class='container-gen'>
     <div class="row">
-        <div class="col-md-12 offset-md-1">
+        <div class="col-md-12 offset-md-0">
  <div id='card-genre'>
  <button type="button" class="btn btn-primary btn-gende" id="drama">Drama  <i class="fas fa-sad-tear"></i></button>
- <button type="button" class="btn btn-primary btn-gende" id="comedia">Comedia  <i class="fas fa-grin-squint-tears"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="comedy">Comedia  <i class="fas fa-grin-squint-tears"></i></button>
  <button type="button" class="btn btn-primary btn-gende" id="romance">Romance  <i class="fas fa-grin-hearts"></i></button>
- <button type="button" class="btn btn-primary btn-gende" id="ciencia">Ciencia Ficcion  <i class="fas fa-dizzy"></i></button>
- <button type="button" class="btn btn-primary btn-gende" id="terror">Terror  <i class="fas fa-flushed"></i></button>
- <button type="button" class="btn btn-primary btn-gende" id="accion">Accion  <i class="fas fa-angry"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="cifi">Ciencia Ficcion  <i class="fas fa-dizzy"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="horror">Terror  <i class="fas fa-flushed"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="action">Accion  <i class="fas fa-fighter-jet"></i></button>
+
+<div id="gender-complete" style="display: none;">
+<button type="button" class="btn btn-primary btn-gende" id="fantasy">Fantasia  <i class="fas fa-hat-wizard"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="western">Western <i class="fas fa-campground"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="musical">Musicales <i class="fas fa-music"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="kids">Infantil <i class="fas fa-child"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="animation">Animación <i class="fas fa-dragon"></i></button>
+ <button type="button" class="btn btn-primary btn-gende" id="docu">Documental  <i class="fas fa-video"></i></button>
 </div>
- </div>
+</div>
+</div>
  </div>
  </div>
 </section>
  
+<div id="show-genre" class="row"></div>
+
   <!-- Carrusel selecionados para ti -->
 <section>
    
     <div id="titulo-container-reco"> 
         <h5>Recomendaciones Populares</h5>
       </div>
-
-      <div class='container'>
-          <div class="col-md-6 offset-md-0"> 
-                <div class="card mb-3 card-reco">
-                  <div class="row no-gutters">
-                    <div class="col-md-4">
-                      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2019/04/mejores-peliculas-risa-comedia-netflix-2019.jpg?itok=D9stoA6F" class="card-img img-fluid" alt="...">
+      <div class='container-reco'>
+        <div class="row">
+              <div class="card card-repo" style="width: 18rem";>
+                  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2019/04/mejores-peliculas-risa-comedia-netflix-2019.jpg?itok=D9stoA6F" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Top 50 Comedia</p>
+                  </div>
+                </div>
+                
+                <div class="card card-repo" style="width: 18rem";>
+                    <img src="http://dujye7n3e5wjl.cloudfront.net/photographs/1080-tall/time-100-influential-photos-ellen-degeneres-oscars-selfie-100.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Top 50 Actores</p>
                     </div>
-                    <div class="col-md-8">
+                  </div>
+               
+                  <div class="card card-repo" style="width: 18rem";>
+                      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2018/04/mejores-peliculas-terror-miedo-hbo.jpg?itok=hD6psvRr" class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h4 class="card-title">Top 50 Comedia</h4>
-                        <p class="card-text">Para no parar de reir en familia o con amigos.</p>
+                        <p class="card-text">Top 50 Terror</p>
                       </div>
                     </div>
+                 
+                    <div class="card card-repo" style="width: 18rem";>
+                        <img src="http://d2yspv744gxsd1.cloudfront.net/wp-content/uploads/2018/01/23152026/noticia-premios-oscar-2018-nominados.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Top 50 Mejores Películas</p>
+                        </div>
+                      </div>
+                    </div>  
+                    <div id="reco-complete" style="display: none;">
+<div class="row">
+                    <div class="card card-repo" style="width: 18rem";>
+                      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-peliculas-romanticas-netflix-espana-1537372865.jpg?crop=1.00xw:0.877xh;0,0.0171xh&resize=768:*" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">Top 50 Romanticas</p>
+                      </div>
+                    </div>
+                
+                  <div class="card card-repo" style="width: 18rem";>
+                    <img src="https://www.bolsamania.com/cine/wp-content/uploads/2017/02/2-11.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Top 50 Superheroes</p>
+                    </div>
+                  </div>
+                 
+                <div class="card card-repo" style="width: 18rem";>
+                  <img src="https://cineoculto.com/wp-content/uploads/2018/10/LatinasOscar-47.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Top 50 en Español</p>
                   </div>
                 </div>
               
-    
-                <div class="card mb-3 card-reco">
-                  <div class="row no-gutters">
-                    <div class="col-md-4">
-                      <img src="http://dujye7n3e5wjl.cloudfront.net/photographs/1080-tall/time-100-influential-photos-ellen-degeneres-oscars-selfie-100.jpg" class="card-img img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h4 class="card-title">Top 50 Actores</h4>
-                        <p class="card-text">Los actores mas reconocidos a nivel mundial estan en esta lista.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3 card-reco">
-                  <div class="row no-gutters">
-                    <div class="col-md-4">
-                      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2018/04/mejores-peliculas-terror-miedo-hbo.jpg?itok=hD6psvRr" class="card-img img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h4 class="card-title">Top 50 Horror</h4>
-                        <p class="card-text">Las películas mas escalofriantes de todos los tiempos.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3 card-reco">
-                  <div class="row no-gutters">
-                    <div class="col-md-4">
-                      <img src="http://d2yspv744gxsd1.cloudfront.net/wp-content/uploads/2018/01/23152026/noticia-premios-oscar-2018-nominados.png" class="card-img img-fluid" alt="imagnes-terror">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h4 class="card-title">Top 50 mejor ranking</h4>
-                        <p class="card-text">No las puedes dejar pasar.</p>
-                      </div>
-                    </div>
-                  </div>
+              <div class="card card-repo" style="width: 18rem";>
+                <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/06/Cine-CI-fi.jpg?itok=4uk3f-Uj" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Top 50 Ciencia Ficción</p>
                 </div>
               </div>
-        </div>
+            </div>
 
-</section>
+            <div class="row">
 
- <!-- <div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <div class="card card-repo" style="width: 18rem";>
+                <img src="https://www.elcineenlasombra.com/wp-content/uploads/2014/12/ghibli.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Top 50 Animadas</p>
+                </div>
+              </div>
+          
+            <div class="card card-repo" style="width: 18rem";>
+              <img src="http://static.t13.cl/images/sizes/1200x675/1429720253_1440documentalesconciencia.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Top 50 Documentales</p>
+              </div>
+            </div>
+           
+          <div class="card card-repo" style="width: 18rem";>
+            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/07/20-mejores-western-historia_19.jpg?itok=TDpu4U3Q" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Top 50 Western </p>
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        
+        <div class="card card-repo" style="width: 18rem";>
+          <img src="https://nosubmarinesdotcom.files.wordpress.com/2017/07/captainfantastic-cineyear1.jpg?w=840" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Top 50 Familiares</p>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-  </div> -->
+        </div>
+        </div>
+      </div>
+</section>
+
 
   
 </main>
 <footer class="py-4 text-white-50">
-    <div class="container text-center">
+    <div id="footer" class="container text-center">
         <small>
             Todos derechos reservados 
         </small>
@@ -192,7 +199,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-  <script src="data-3.js"></script>
+  <!--<script src="data-3.js"></script>-->
   <script src="main-3.js"></script> 
 </body>
 </html>
