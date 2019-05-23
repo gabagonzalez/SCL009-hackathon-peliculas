@@ -37,10 +37,6 @@ En la Novena generación de Laboratoria SCL, se nos planteó el desafió de hace
 ---
  [![trello](https://i.ibb.co/VTcrc56/trello.jpg)](https://trello.com/b/gtbz9bRh/peliss/)
 
-- Esquemas, Flujos
-
-![proto1](https://i.ibb.co/hH3cSqm/proto1.jpg)
-![proto2](https://i.ibb.co/cQtwGb3/proto2.jpg)
 
 ---
 
