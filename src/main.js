@@ -51,6 +51,7 @@ setInterval(function () {
 btnSearchName.addEventListener('click', (e) => {
   e.preventDefault();
   resultGenre.innerHTML = "";
+  result.innerHTML = "";
   let flickName = document.getElementById("searchText").value;
   showResult(dataOMDB)
 
@@ -132,3 +133,4 @@ document.getElementById("recom").addEventListener("click", () => {
   document.getElementById("carousel").style.display = "none";
   document.getElementById("container-gen").style.display = "none";
 });
+
