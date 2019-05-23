@@ -1,4 +1,3 @@
-// APIS URL
 const dataOMDB ="http://www.omdbapi.com/?i=tt3896198&apikey=5a2182d7";
 const dataTMDB = "https://api.themoviedb.org/3/discover/movie?api_key=f1398813842891afd3168eb1700013e0&with_genres=";
 
@@ -7,14 +6,12 @@ const resultText = document.getElementById("resultText");
 const resultGenre = document.getElementById("show-genre");
 
 
-//BOTONES
 const btnSearchName = document.getElementById("btnSearch");
 const btnSearchGenre = document.getElementById("action");
 
 //OBTENER PELÏCULAS POR NOMBRE
 btnSearchName.addEventListener('click',(e) =>{
   e.preventDefault();
-  result.innerHTML = "";
   resultGenre.innerHTML = "";
   let flickName = document.getElementById("searchText").value;
   showResult(dataOMDB)
@@ -31,7 +28,7 @@ btnSearchName.addEventListener('click',(e) =>{
           
             searchByTitle.forEach(element => {
               
-              //resultText.innerHTML += `<div class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
+              resultText.innerHTML= `<div class="card border-dark text-center rounded-lg mb-3">Buscaste la película: ${flickName}</div>`
               result.innerHTML +=
 
               `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
@@ -40,15 +37,11 @@ btnSearchName.addEventListener('click',(e) =>{
                 <img src="${element.Poster}" class="card-img-top" alt="${element.Title}">
                 
       
-                <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.Title}">Ver más</button>
+                <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.imbdID}">Ver más</button>
               </div>
             </div>`
-
-               
-
             })
         
-           
 
         })
      
@@ -83,7 +76,7 @@ btnSearchGenre.addEventListener('click',(e) =>{
                 <img src="https://image.tmdb.org/t/p/w500/${element.poster_path}" class="card-img-top" alt="${element.title}">
                 
       
-                <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.Title}">Ver más</button>
+                <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.imbdID}">Ver más</button>
               </div>
             </div>`
             })
@@ -95,6 +88,17 @@ btnSearchGenre.addEventListener('click',(e) =>{
   
 
 })
+
+
+/*fetch("http://www.omdbapi.com/?i=tt3896198&apikey=5a2182d7")
+  .then(function(response){
+    return response.json();
+  }
+  )
+
+  .then(function(data){
+    console.log(data)
+  })*/
 
 //FUNCION PARA CARRUSEL
 let timer = 4000;
@@ -128,16 +132,3 @@ setInterval(function () {
   $("#c > li").eq(i + 3).css('left', '75%').addClass('active').css('transition-delay', '2s');
 
 }, timer);
-
-
-
-
-/*fetch("http://www.omdbapi.com/?i=tt3896198&apikey=5a2182d7")
-  .then(function(response){
-    return response.json();
-  }
-  )
-
-  .then(function(data){
-    console.log(data)
-  })*/
