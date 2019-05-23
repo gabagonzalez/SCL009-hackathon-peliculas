@@ -185,11 +185,11 @@ section {
     margin-top:1%;
 }
 .gender-complete, .reco-complete{
-    display: none;
+    display: none !important;
 }
 .container-reco, .container-gen{
     margin-left: 1%;
-    display: block;
+    display: block !important;
 }
 @media (max-width: 576px) {
     .container-reco, .container-gen{

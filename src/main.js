@@ -124,7 +124,7 @@ document.getElementById("genders").addEventListener("click", () => {
   document.getElementById("container-gen").style.display = "block";
   document.getElementById("gender-complete").style.display = "block";
   document.getElementById("carousel").style.display = "none";
-  document.getElementById("container-reco").style.display = "none"
+  document.getElementById("container-reco").style.display = "none";
 });
 //Mostrar recomendaciones//
 document.getElementById("recom").addEventListener("click", () => {
