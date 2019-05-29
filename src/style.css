@@ -67,6 +67,7 @@ section {
 .row {
     padding-top: 40px;
 }
+
 .active {
     opacity: 1;
 }
@@ -97,9 +98,6 @@ section {
         margin-bottom: 0,5%x;
         width: 40%;
 }
-}
-.row{
-    padding: 0%;
 }
 #card-gender{
     margin-bottom: 2%;
@@ -187,11 +185,11 @@ section {
     margin-top:1%;
 }
 .gender-complete, .reco-complete{
-    display: none;
+    display: none !important;
 }
 .container-reco, .container-gen{
     margin-left: 1%;
-    display: block;
+    display: block !important;
 }
 @media (max-width: 576px) {
     .container-reco, .container-gen{
